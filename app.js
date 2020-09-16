@@ -1,4 +1,4 @@
-//fs.writeFileSync('mylog.txt', 'This is a php log');
+//fs.writeFileSync('assignment_2.txt', 'This is a php log');
 
 var express = require('express');
 var exphbs  = require('express-handlebars');
