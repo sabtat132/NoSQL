@@ -2,7 +2,7 @@
 var express = require('express');
 const fs = require('fs');
 const validator = require('validator');
-const notes = require('./notes.js');
+const notes = require('notes.js');
 
 const message = notes();
 console.log(message);
