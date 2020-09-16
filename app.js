@@ -1,4 +1,4 @@
-//fs.writeFileSync('assignment_2.txt', 'This is a php log');
+//fs.writeFileSync('assignment_2.txt');
 
 var express = require('express');
 const fs = require('fs');
