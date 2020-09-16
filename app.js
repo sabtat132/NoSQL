@@ -1,7 +1,6 @@
 //fs.writeFileSync('assignment_2.txt', 'This is a php log');
 
 var express = require('express');
-var exphbs  = require('express-handlebars');
 const fs = require('fs');
 const validator = require('validator');
 
@@ -23,9 +22,6 @@ fs.writeFileSync('mylog.txt', log_text , (err) => {
     if (err) throw err;
     console.log('File Created');
 });
-
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
 
 app.set('port', process.env.PORT || 3001);
 
