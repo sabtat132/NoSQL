@@ -1,0 +1,58 @@
+<html ng-app="scotchTodo">
+<head>
+  <title>PPU Task List</title>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.CSS"
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.CSS"
+  <style>
+    html       { overflow-y: scroll; }
+    body       { padding-top: 50px;  }
+    #todo-list { margin-bottom: 30px; }
+    #todo-form { margin-bottom: 50px; }
+  </style>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+  <script src="js/controllers/main.js"</script>
+  <script src="js/services/todos.js"</script>
+  <script src="js/core.js"</script>
+</head>
+
+<body ng-controller="mainController">
+  <div class="container">
+
+  <div class="jumbotron text-center">
+    <h1>Point Park University To Do List <span class="label label-info">{{todos.length}}</span><h1>
+    </div>
+
+  <div id = "todo-list" class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+
+  <div class="checkbox" ng-repeat="todo in todos">
+  <label>
+    <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{todo.text }}
+    </label>
+  </div>
+
+<p class="text-center" ng-show="loading">
+  <span class="fa fa-spinner fa-spin fa-3x"></span>
+  </p>
+
+  </div>
+</div>
+
+<div id="todo-form" class="row">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <form>
+      <div class="form-group">
+
+      <input type="text" class="form-control input-lg text-center" placeholder="Type something here.." ng-model="formData.text"</input>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
+      </form>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
